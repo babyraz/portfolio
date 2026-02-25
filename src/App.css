@@ -1,0 +1,53 @@
+/* General styles */
+.App {
+  text-align: center;
+}
+
+header {
+  background-color: #282c34;
+  padding: 50px;
+  color: white;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+}
+
+section {
+  padding: 50px 20px;
+  min-height: calc(100vh - 50px);  /* Ensure each section takes up full viewport height */
+  margin-top: 70px; /* Ensure the section starts below the header */
+}
+
+.about-lines {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Adjust height as needed */
+  font-size: 7.5rem;
+}
+
+.about-line {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Slide in from below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive font size */
+@media (max-width: 768px) {
+  .about-lines {
+    font-size: 1.2rem;
+  }
+}
